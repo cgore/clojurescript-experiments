@@ -2,9 +2,9 @@
   (:require [clojure.browser.dom :as dom]
             [clojure.browser.event :as event]))
 
-(defn handle-click []
-  (js/alert (js/Date)))
-
 (def clock-paragraph (dom/get-element "digital-clock"))
+
+(defn handle-click []
+  (dom/set-text clock-paragraph (js/Date)))
 
 (event/listen clock-paragraph :click handle-click)
