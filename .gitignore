@@ -7,5 +7,5 @@
 *.sw[nop]
 
 # ClojureScript stuff
-*/resources/*
+*/resources/public/js/*
 */target/*
