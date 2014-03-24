@@ -38,8 +38,8 @@ This demonstrates interacting with the DOM, events, and calling JavaScript funct
 The files you are interested in are:
 
 - src/clj/digital_clock/server.js
+- src/cljs/digital_clock/client.cljs
 
 * 03-analog-clock
 
 TODO
-- src/cljs/digital_clock/client.cljs
