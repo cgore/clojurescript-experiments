@@ -1,5 +1,8 @@
 These are my experiments learning ClojureScript.
 
+- This uses Leiningen from http://leiningen.org/
+- This uses cljs-kickoff from https://github.com/konrad-garus/cljs-kickoff
+
 * 01-hello-alert
 
 You can make the first project by:
@@ -8,6 +11,10 @@ You can make the first project by:
 lein new cljs-kickoff hello-alert
 mv hello-alert 01-hello-alert
 #+END_SRC
+
+You can't create the project directly with the directory name 01, because that
+isn't a legitimate variable name in ClojureScript, but you can rename the
+directory after the fact and it will work.
 
 Running a server:
 
@@ -20,5 +27,6 @@ The first time through it will take a while to compile cljs.js, but it should
 be under a minute overall, and then a server will be started.  The basic bare
 ClojureScript app is a hello popup, which you can access via http://localhost:3001
 
-- This uses Leiningen from http://leiningen.org/
-- This uses cljs-kickoff from https://github.com/konrad-garus/cljs-kickoff
+* 02-digital-clock
+
+This is a digital clock, showing the current time.
