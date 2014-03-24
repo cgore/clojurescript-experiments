@@ -1,0 +1,18 @@
+These are my experiments learning ClojureScript.
+
+You can make the first project by:
+
+lein new cljs-kickoff hello-alert
+mv hello-alert 01-hello-alert
+
+Running a server:
+
+cd 01-hello-alert
+lein ring server
+
+The first time through it will take a while to compile cljs.js, but it should
+be under a minute overall, and then a server will be started.  The basic bare
+ClojureScript app is a hello popup, which you can access via http://localhost:3001
+
+This uses Leiningen from http://leiningen.org/
+This uses cljs-kickoff from https://github.com/konrad-garus/cljs-kickoff
