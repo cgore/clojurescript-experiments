@@ -15,7 +15,7 @@
         "</head>"
         "<body>"
         "<div>"
-        "<p id=\"clickable\">Click me!</p>"
+        "<p id=\"digital-clock\">Click me!</p>"
         "</div>"
         "<script src=\"js/cljs.js\"></script>"
         "</body>"

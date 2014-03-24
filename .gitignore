@@ -1,0 +1,11 @@
+# Ignore emacs swap and temp files.
+\#*\#
+.#*
+
+# Ignore vim swap and temp files.
+*~
+*.sw[nop]
+
+# ClojureScript stuff
+*/resources/*
+*/target/*

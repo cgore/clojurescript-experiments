@@ -1,7 +1,8 @@
-(ns hello-clojurescript)
+(ns digital-clock
+  (:require [clojure.browser.dom :as dom]))
 
 (defn handle-click []
-  (js/alert "Hello!"))
+  (js/alert (js/Date)))
 
-(def clickable (.getElementById js/document "clickable"))
-(.addEventListener clickable "click" handle-click)
+(def clock-paragraph (dom/get-element "digital-clock"))
+(.addEventListener clock-paragraph "click" handle-click)
