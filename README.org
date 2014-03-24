@@ -1,4 +1,4 @@
-These are my experiments learning ClojureScript.
+These are my experiments while learning the [[https://github.com/clojure/clojurescript][ClojureScript]] programming language.
 
 - This uses Leiningen from http://leiningen.org/
 - This uses cljs-kickoff from https://github.com/konrad-garus/cljs-kickoff
