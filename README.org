@@ -5,6 +5,8 @@ These are my experiments learning ClojureScript.
 
 * 01-hello-alert
 
+This demonstrates how to stand up an empty new ClojureScript project.
+
 You can make the first project by:
 
 #+BEGIN_SRC sh
@@ -31,7 +33,13 @@ ClojureScript app is a hello popup, which you can access via http://localhost:30
 
 This is a digital clock, showing the current time.
 
+This demonstrates interacting with the DOM, events, and calling JavaScript functions.
+
 The files you are interested in are:
 
 - src/clj/digital_clock/server.js
+
+* 03-analog-clock
+
+TODO
 - src/cljs/digital_clock/client.cljs
