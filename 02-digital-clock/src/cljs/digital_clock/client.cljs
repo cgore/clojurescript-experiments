@@ -4,7 +4,7 @@
 
 (def clock-paragraph (dom/get-element "digital-clock"))
 
-(defn handle-click []
+(defn update-clock []
   (dom/set-text clock-paragraph (js/Date)))
 
-(event/listen clock-paragraph :click handle-click)
+(js/setInterval update-clock 100)
