@@ -30,3 +30,8 @@ ClojureScript app is a hello popup, which you can access via http://localhost:30
 * 02-digital-clock
 
 This is a digital clock, showing the current time.
+
+The files you are interested in are:
+
+- src/clj/digital_clock/server.js
+- src/cljs/digital_clock/client.cljs
