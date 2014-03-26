@@ -15,7 +15,7 @@
         "</head>"
         "<body>"
         "<div>"
-        "<canvas id=\"analog-clock\" width=\"500\" height=\"500\">canvas not supported</canvas>"
+        "<canvas id=\"analog-clock\" width=\"400\" height=\"400\">canvas not supported</canvas>"
         "<p id=\"digital-clock\">waiting on Javascript ...</p>"
         "</div>"
         "<script src=\"js/cljs.js\"></script>"
