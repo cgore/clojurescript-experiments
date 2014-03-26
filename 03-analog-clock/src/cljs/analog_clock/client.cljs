@@ -35,7 +35,7 @@
 (defn degrees-from-hour [hour]
   (let [degrees-per-hour (/ 360 12)
         hour-offset 3]
-    (* (- hour hour-offset) degrees-per-hour)))
+    (* (- (mod hour 12) hour-offset) degrees-per-hour)))
 
 (defn radians-from-hour [hour]
   (radians-from-degrees (degrees-from-hour hour)))
@@ -79,10 +79,14 @@
         width 400
         height 400
         center [(/ width 2)
-                (/ height 2)]]
-    (draw-hour-hand context center 12)
-    (draw-minute-hand context center 17)
-    (draw-second-hand context center 33)))
+                (/ height 2)]
+        date (js/Date.)]
+    ;(.save canvas)
+    ;(.clearRect canvas 0 0 width height)
+    ;(.restore canvas)
+    (draw-hour-hand   context center (.getHours   date))
+    (draw-minute-hand context center (.getMinutes date))
+    (draw-second-hand context center (.getSeconds date))))
 
 (defn update-clock []
   (update-digital-clock)
