@@ -6,11 +6,19 @@
   (dom/set-text (dom/get-element "digital-clock")
                 (js/Date)))
 
+(defn draw-line [context start-point end-point color line-width]
+  (set! (. context -strokeStyle) color)
+  (set! (. context -lineCap) "round")
+  (set! (. context -lineWidth) line-width)
+  (.beginPath context)
+  (.moveTo context (first start-point) (second start-point))
+  (.lineTo context (first end-point) (second end-point))
+  (.stroke context))
+
 (defn update-analog-clock []
   (let [canvas (dom/get-element "analog-clock")
         context (.getContext canvas "2d")]
-    (set! (. context -fillStyle) "#ff0000")
-    (.fillRect context 0 0 100 100)))
+    (draw-line context [200 200] [300 300] "red" 20)))
 
 (defn update-clock []
   (update-digital-clock)
