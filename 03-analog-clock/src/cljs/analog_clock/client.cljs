@@ -81,9 +81,7 @@
         center [(/ width 2)
                 (/ height 2)]
         date (js/Date.)]
-    ;(.save canvas)
-    ;(.clearRect canvas 0 0 width height)
-    ;(.restore canvas)
+    (.clearRect context 0 0 width height)
     (draw-hour-hand   context center (.getHours   date))
     (draw-minute-hand context center (.getMinutes date))
     (draw-second-hand context center (.getSeconds date))))
