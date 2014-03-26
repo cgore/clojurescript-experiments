@@ -1,7 +1,15 @@
-(ns hello-clojurescript)
+(ns analog-clock
+  (:require [clojure.browser.dom :as dom]
+            [clojure.browser.event :as event]))
 
-(defn handle-click []
-  (js/alert "Hello!"))
+(defn update-digital-clock []
+  (dom/set-text (dom/get-element "digital-clock")
+                (js/Date)))
 
-(def clickable (.getElementById js/document "clickable"))
-(.addEventListener clickable "click" handle-click)
+(defn update-analog-clock []) ; TODO
+
+(defn update-clock []
+  (update-digital-clock)
+  (update-analog-clock))
+
+(js/setInterval update-clock 100)
