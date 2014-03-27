@@ -3,6 +3,11 @@ These are my experiments while learning the [[https://github.com/clojure/clojure
 - This uses Leiningen from http://leiningen.org/
 - This uses cljs-kickoff from https://github.com/konrad-garus/cljs-kickoff
 
+Useful links:
+
+- An online ClojureScript REPL: [[http://clojurescript.net/]]
+- A Clojure cheat sheet (mostly still applies): [[http://clojure.org/cheatsheet]]
+
 * 01-hello-alert
 
 This demonstrates how to stand up an empty new ClojureScript project.
@@ -42,4 +47,7 @@ The files you are interested in are:
 
 * 03-analog-clock
 
-TODO
+This draws an analog clock.
+
+This demonstrates a lot of basic programming logic constructs in ClojureScript,
+and also demonstrates a lot of the basics of using HTML5 canvas objects too. 
