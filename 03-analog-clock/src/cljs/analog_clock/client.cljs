@@ -73,15 +73,45 @@
              "blue"
              5))
 
+(defn draw-bezel [context center]
+  (set! (. context -strokeStyle) "black")
+  (set! (. context -fillStyle) "yellow")
+  (set! (. context -lineWidth) 5)
+  (.beginPath context)
+  (.arc context (first center) (second center) 190 0 tau false)
+  (.stroke context))
+
+(defn draw-hour-dot [context center hour]
+  (let [[x y] (cartesian-from-polar center 190 (radians-from-hour hour))]
+    (set! (. context -strokeStyle) "black")
+    (set! (. context -fillStyle)
+          ;;; WARNING: (contains? [3 6 9] hour) doesn't work the obvious way.
+          (cond (contains? #{0 12}  hour) "black"
+                (contains? #{3 6 9} hour) "gray"
+                :else                     "white"))
+    (set! (. context -lineWidth) 4)
+    (.beginPath context)
+    (.arc context x y 10 0 tau false)
+    (.fill context)
+    (.stroke context)))
+
 (defn update-analog-clock []
   (let [canvas (dom/get-element "analog-clock")
         context (.getContext canvas "2d")
-        width 400
-        height 400
+        width 420
+        height 420
         center [(/ width 2)
                 (/ height 2)]
         date (js/Date.)]
     (.clearRect context 0 0 width height)
+    (draw-bezel context center)
+
+    ;;; WARNING: I tried doing this with map; apparently me and ClojureScript
+    ;;; have some disagreements about how map should work I guess, but this
+    ;;; actually works at least.
+    (doseq [hour (range 12)]
+      (draw-hour-dot context center hour))
+
     (draw-hour-hand   context center (.getHours   date))
     (draw-minute-hand context center (.getMinutes date))
     (draw-second-hand context center (.getSeconds date))))
