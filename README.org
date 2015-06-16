@@ -51,3 +51,18 @@ This draws an analog clock.
 
 This demonstrates a lot of basic programming logic constructs in ClojureScript,
 and also demonstrates a lot of the basics of using HTML5 canvas objects too. 
+
+* 04
+
+* 05-om
+
+This is a simple build of an Om Figwheel template project.
+The Om basic tutorial is at: https://github.com/omcljs/om/wiki/Basic-Tutorial
+After running:
+
+#+BEGIN_SRC sh
+cd 05-om
+lein figwheel
+#+END_SRC
+
+You will eventually be able to see your app on: http://localhost:3449/
