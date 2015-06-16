@@ -54,14 +54,14 @@ and also demonstrates a lot of the basics of using HTML5 canvas objects too.
 
 * 04
 
-* 05-om
+* 05-om-tutorial
 
 This is a simple build of an Om Figwheel template project.
 The Om basic tutorial is at: https://github.com/omcljs/om/wiki/Basic-Tutorial
 After running:
 
 #+BEGIN_SRC sh
-cd 05-om
+cd 05-om-tutorial
 lein figwheel
 #+END_SRC
 
